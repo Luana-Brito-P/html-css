@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" minlength="4" maxlength="20" required>
+            </p>
+            <p>
+                <label for="email">E-mail: </label>
+                <input type="email" name="name" id="name" required autocomplete="email">
+            </p>
+            <p>
+                <label for="tel">Telefone: </label>
+                <input type="tel" name="tel" id="tel" required autocomplete="tel-national" pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxx-xxxx">
+                <!-- 9 digitos ao todo dps de 4 digitos vai ter um '-' e dps vai ter 4 digitos-->
+            </p>
+            <!-- Estudar mais sobre RegEx
+                 HTML5 telefone pattern
+            -->
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
+<!-- 
+    fieldset é um envelopamento de um grupo
+    legend é uma 'etiqueta' para um grupo envelopado
+-->
