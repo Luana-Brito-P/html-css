@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+
+<form action="cadastro.php" method="post" autocomplete="on">
+    <p>
+        <label for="user">Usúario: </label>
+        <input type="text" name="user" id="user" required minlength="5" maxlength="15" size="12" placeholder="nome do usúario" autocomplete="username">
+    </p>
+    <p>
+        <label for="senha">Senha: </label>
+        <input type="password" name="senha" id="senha" required minlength="8" maxlength="20" size="16" placeholder="mínimo 8 caracteres" autocomplete="current-password">
+    </p>
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+</form>
+</body>
+</html>
+<!--
+    Use required para n permitir o envio de formulários vazios;
+    Use minlength para determinar os caracteres mínimos e maxlength para determinar os carecteres máximos que esses valores precisam ter;
+    Use size para determinar quantos caracteres aparecerão na caixa, ou seja, o tamanho da caixa 
+    placeholder é usado para dar dica, fica escrito na caixa do formulário e assim que o usúario digitar ele desaparece;
+    autocomplete tem q estar no on para identificar as caixas, sinalizando para o computador que tipo de dado é aquele para oferecer preechimento a respeito da sua identificação, facilitando o preenchimento do formulário;
+     -->
