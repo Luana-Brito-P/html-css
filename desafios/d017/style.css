@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+    box-sizing: border-box; /*pra borda dos fazerem parte dos elementos*/
+    margin: 0px;
+    padding: 0px;
+
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: grid;
+    grid-template: 80px 40px 1fr 40px / 1fr 150px;
+    gap: 5px;
+}
+
+.caixa {
+    text-align: center;
+    place-content: center center;
+    background-color: lightgray;
+    border: 1px solid black;
+}
+
+#topo {
+    grid-area: 1 / 1 / 2 / -1;
+}
+
+#menu {
+    grid-area: 2 / 1 / 3 / -1;
+}
+
+#principal {
+    grid-area: 3 / 1 / 4 / 2;
+    
+}
+
+#secundario {
+    grid-area: 3 / 2 / 4 / -1;
+}
+
+#rodape {
+    grid-area: 4 / 1 / 5 /-1;
+}
+
+/* o conteúdo principal sempre vai aumentar, tanto em linha tanto em coluna, para ele se tornar flexível, é necessário color as suas respectivar medidas como uma 1fr, pq?
+pq o calculo vai deixar 80, 40, e 40 reservados para linha e o resto vai ser do principal, nas colunas 150 será reservados e os resto será do principal 
+lembresse isso só vai funcionar se o height e o widht forem definidos para 100 vh e vw
+*/
